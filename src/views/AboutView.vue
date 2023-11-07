@@ -1,17 +1,19 @@
 <template>
-    <el-main class="about">
-        <el-card v-for='item:any in data'  class="box-card">
+    <main class="about" style="padding-bottom: 60px">
+        <el-card v-for='item in data' class="box-card">
             <template #header>
                 <div class="card-header">
-                    <h4 style="font-weight: bold">{{item.CourseScheduling.coursename}}</h4>
-                    <p style="font-size: 14px; padding-top: 8px">{{item.Teacher.name}}({{item.Teacher.jobnumber}}), 已评 2 次,暂存 2 次</p>
+                    <h4 style="font-weight: bold">{{ item.CourseScheduling.coursename }}</h4>
+                    <p style="font-size: 14px; padding-top: 8px">{{ item.Teacher.name }}({{ item.Teacher.jobnumber }}),
+                        已评 2 次,暂存 2 次</p>
                     <el-button class="button" text>评教</el-button>
                     <el-button class="button" text>删除</el-button>
                 </div>
+
             </template>
         </el-card>
 
-    </el-main>
+    </main>
 </template>
 
 <style>
